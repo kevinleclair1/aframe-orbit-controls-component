@@ -203,6 +203,7 @@ AFRAME.registerComponent('orbit-controls', {
       }
     }
 
+    this.target = this.sceneEl.querySelector(this.data.target).object3D.position.clone();
     this.dolly.position.copy(this.object.position);
     this.updateView(true);
   },
